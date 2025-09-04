@@ -27,7 +27,7 @@ const TabsPage = () => {
                 })}
                 key={tab.id}
               >
-                <Link to={`${tab.id}`}>{tab.title}</Link>
+                <Link to={`/tabs/${tab.id}`}>{tab.title}</Link>
               </li>
             ))}
           </ul>

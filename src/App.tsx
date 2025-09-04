@@ -12,10 +12,11 @@ export const App = () => {
     <>
       <Navigation />
       <Routes>
-        <Route path={'/'} element={<App />} />
-        <Route path="/home" element={<Navigate to="/" replace />} />
         <Route index element={<HomePage />} />
-        <Route path="tabs" element={<TabsPage />}>
+        <Route path={'/'} element={<HomePage />} />
+        <Route path="/home" element={<Navigate to="/" replace />} />
+        <Route path="tabs">
+          <Route index element={<TabsPage />} />
           <Route path=":tabId" element={<TabsPage />} />
         </Route>
         <Route path="*" element={<NotFoundPage />} />
